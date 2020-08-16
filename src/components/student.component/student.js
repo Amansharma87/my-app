@@ -36,8 +36,6 @@ class Student extends React.Component {
             <div>
             <li>{s.name}</li>
             <li>{s.section}</li>
-            <li>{s.phone}</li>
-            <li>{s.roll}</li>
             </div>
             )}
         </ul>
