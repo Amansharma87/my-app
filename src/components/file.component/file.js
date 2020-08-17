@@ -1,6 +1,6 @@
 import React from 'react';
 import './file.css';
-import { navigate,navigation,useRedirect,redirect,Redirect} from 'hookrouter';
+import { navigate} from 'hookrouter';
 class File extends React.Component {
 //       function sayHello() {
 //     alert('Hello, World!');
@@ -10,29 +10,32 @@ constructor(props) {
     this.state = { email: '',password:''};
     this.myChangeHandler = this.myChangeHandler.bind(this);
     this.Submit = this.Submit.bind(this);
+    this.account={
+      'aman@gmail.com': '12',
+      'aman87337@gmail.com': '12'
+     }
   }
-  account=
-{
-    'aman@gmail.com':12,
-    'aman87337@gmail.com':12
-}
-  
+  account={};
+ 
  myChangeHandler(e){
      console.log(e.target.value)
      this.setState({ [e.target.id] : e.target.value})
      
 
  }
+ 
   Submit(event){ 
     event.preventDefault();
-    if(this.account[this.state.email] ==this.state.password){
+    // "eqeqeq": [2, "allow-null"];
+    console.log(this.account)
+    if(this.account[this.state.email]===this.state.password){
 
       navigate('/student');
       window.location.reload()
        
     }
     else{
-    alert('Wrong Id pass')
+    alert('Wrong Id pass') 
     }
     
       
