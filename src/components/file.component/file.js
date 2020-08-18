@@ -55,7 +55,8 @@ constructor(props) {
             <input type="text" id="email" name="email" onChange={this.myChangeHandler} className="fadeIn second"  placeholder="Email" />
             <input type="password" name="password" id="password" onChange={this.myChangeHandler} className="fadeIn third"  placeholder="Password" />
             <input  type="submit"  className="fadeIn fourth" value="Sign Up" />
-            </form>
+                        </form>
+                        <a href="/student">     <button>a</button> </a>
         </div>
     </div>
 
