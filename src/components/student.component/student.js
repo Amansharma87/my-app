@@ -1,6 +1,6 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './student.css'; 
-import { findAllByTestId } from '@testing-library/react';
+// import { findAllByTestId } from '@testing-library/react';
 class Student extends React.Component {
    constructor(props) {
         super(props);
@@ -71,7 +71,7 @@ remove(event) {
     console.log(event.target.value.toLowerCase())
     var item=event.target.value.toLowerCase()
     for (let i = 0; i< this.Students.length; i++) {
-      if(this.Students[i].name.toLowerCase()==item)
+      if(this.Students[i].name.toLowerCase()===item)
       this.setState({form:
      this.Students.splice(i,1),prop:false,del:false
     })
@@ -133,7 +133,6 @@ myChangeHandler(event){
                 <td >{e.phone}</td>
                 <td>{e.section}</td>
                 <td >{e.roll}</td>
-                {/* <td><button onClick={this.removePeople=(event)=>{console.log(this.Students.indexOf(event))}}>delete</button></td> */}
               </tr>
               ))}
               </tbody>
