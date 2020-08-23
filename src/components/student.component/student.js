@@ -79,8 +79,10 @@ remove(event) {
     }
   }
 myChangeHandler(event){
-     this.setState({form :{[event.target.name] : event.target.value},
-      })
+  var b=this.state.form
+  b[event.target.name]=event.target.value
+    this.setState({form :b })
+      console.log(this.state.form)
 }
     render(){
         return (

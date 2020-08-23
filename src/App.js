@@ -1,14 +1,16 @@
-// import React from 'react';
+import React from 'react';
 import './App.css';
-import routes from "./router";
-import { useRoutes } from "hookrouter";
+// import routes from "./router";
+// import { useRoutes } from "hookrouter";
+// import { render } from '@testing-library/react';
 // import { Route, Link,Router,Switch } from "react-router";
 // import Student from './components/student.component/student';
-function App() {
+class App extends React.Component {
     
-    const routeResult = useRoutes(routes);
-    return (routeResult) ;
-  //   <Router>
+    render(){
+    return(<div>abcd</div>)
+    }
+    //   <Router>
   //     <Switch>
   //   <div>
   //     <Route path="" component={File} />
