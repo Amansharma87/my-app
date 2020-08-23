@@ -77,7 +77,7 @@ function Game() {
     }
 
     if(!winner){
-        if(count==10){
+        if(count===10){
             return(
                 <div>
                 <h1>Gameover</h1>
@@ -93,6 +93,8 @@ function Game() {
             <h1>Tic Tak Toe</h1>
             <div>
                 <table>
+
+                    <tbody>
                     <tr>
                         <td><input type="button" id="1" onClick={entry} /></td>
                         <td><input type="button" id="2" onClick={entry} /></td>
@@ -105,21 +107,22 @@ function Game() {
                     </tr>
                     <tr>
                         <td><input type="button" id="7" onClick={entry} /></td>
-                        <td class="vert"><input type="button" id="8" onClick={entry} /></td>
+                        <td ><input type="button" id="8" onClick={entry} /></td>
                         <td><input type="button" id="9" onClick={entry} /></td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
             <div id="player">
-              {count%2!=0?
+              {count%2!==0?
               <h3>Player 1 turn</h3>              :
                 <h3>Player 2 turn</h3>}
-                <button style={{marginLeft:'35%'}} disabled={count==1 }onClick={remove} >Cancel last Move</button>
+                <button style={{marginLeft:'35%'}} disabled={count===1 }onClick={remove} >Cancel last Move</button>
             </div>
         </div>
     )}}
     else{
-        if(count%2!=0){
+        if(count%2!==0){
         return(
         <h1>Player 2 wins</h1>
         )}
