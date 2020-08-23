@@ -10,7 +10,7 @@ import Game from './components/gam.component/game';
 
 ReactDOM.render(
   <BrowserRouter>
-  <Route path='/game' exact component={ Game }/>
+  <Route path='/' exact component={ Game }/>
  </BrowserRouter>,
   document.getElementById('root')
 );
